@@ -1,0 +1,158 @@
+{
+  "id": "a3065d62-b363-47bd-ae30-e5baddb32f38",
+  "version": "2.0",
+  "name": "Stockbit",
+  "url": "https://stockbit.com/#/login",
+  "tests": [{
+    "id": "af83faef-de84-4dc4-9100-b692c1fd84da",
+    "name": "Test_Pencarian",
+    "commands": [{
+      "id": "f7aa26f0-f38c-4bc3-b9c4-acb76f0db4b4",
+      "comment": "",
+      "command": "open",
+      "target": "https://stockbit.com/#/stream",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe0dcbab-707a-458d-a164-24b4b9434441",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "750f1ba8-b3ac-4c8b-92c7-3e60ade7da06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.searchbox",
+      "targets": [
+        ["css=.searchbox", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='header-search']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd8ac0e5-2379-4e90-9c17-d57e7eb71017",
+      "comment": "",
+      "command": "type",
+      "target": "css=.searchbox",
+      "targets": [
+        ["css=.searchbox", "css:finder"],
+        ["xpath=//input[@value='bbri']", "xpath:attributes"],
+        ["xpath=//div[@id='header-search']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "bbri"
+    }, {
+      "id": "79e7a1f6-de8a-4d37-a6b1-afca28beaf75",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.searchbox",
+      "targets": [
+        ["css=.searchbox", "css:finder"],
+        ["xpath=//input[@value='bbri']", "xpath:attributes"],
+        ["xpath=//div[@id='header-search']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "12e129c4-d6b5-4e4d-887c-a9e089ac4cb5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4d8b8e30-ae28-4b92-bd69-fc7381944897",
+    "name": "test_invalid_login",
+    "commands": [{
+      "id": "a5cfaabf-74b9-47a6-8270-ce223ef10b3b",
+      "comment": "",
+      "command": "open",
+      "target": "https://stockbit.com/#/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9786884-f278-4d6d-bd9a-d685de7049b6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e09d49c9-1da1-434f-a5db-ecbb3d5a3c46",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='form-login']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "981049db-0643-4444-b7f9-eb11894d2ed0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='form-login']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "galihinvalid@gmail.com"
+    }, {
+      "id": "f85e969b-94c3-4867-b18e-468710c37492",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='form-login']/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "invalid"
+    }, {
+      "id": "09aa4121-b2e7-4096-be64-0f0a5bf2387a",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginbutton",
+      "targets": [
+        ["id=loginbutton", "id"],
+        ["css=#loginbutton", "css:finder"],
+        ["xpath=//input[@id='loginbutton']", "xpath:attributes"],
+        ["xpath=//form[@id='form-login']/div/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2412f6e-7e2a-47ce-852e-00b1e06bd2f0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7890b994-9444-4264-9aa7-b97c0d9b00a1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://stockbit.com/", "https://stockbit.com/#/stream", "https://stockbit.com/#/login"],
+  "plugins": []
+}
